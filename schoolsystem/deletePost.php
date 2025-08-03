@@ -6,6 +6,7 @@ $postId = $_GET['postId'];
 if (isset($postId)) {
     try {
         deletePost($pdo, $postId);
+        $_SESSION['message'] = 'Post deleted successfully.';
         handleHeader($pdo,
         $_SESSION['userId'],
         'admin/admin_home.php',

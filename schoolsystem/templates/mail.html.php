@@ -76,7 +76,7 @@
     <?php if (isset($_SESSION['message'])): ?>
         Swal.fire({
             icon: 'success',
-            title: 'Successfully',
+            title: 'Success!',
             text: "<?= addslashes($_SESSION['message']); ?>"
         });
         <?php unset($_SESSION['message']); ?>

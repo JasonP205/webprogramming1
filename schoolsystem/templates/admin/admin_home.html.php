@@ -186,6 +186,15 @@ session_start();
         <?php unset($_SESSION['error']); ?>
     <?php endif; ?>
 
+    <?php if (isset($_SESSION['message'])): ?>
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: "<?= addslashes($_SESSION['message']); ?>"
+        });
+        <?php unset($_SESSION['message']); ?>
+    <?php endif; ?>
+
     function togglePost() {
         const overlay = document.getElementById('overlay');
         const isVisible = overlay.style.display === 'flex';

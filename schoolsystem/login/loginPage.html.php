@@ -58,6 +58,14 @@
             });
             <?php unset($_SESSION['error']); ?>
         <?php endif; ?>
+        window.addEventListener('load', function(){
+            Swal.fire({
+            icon: 'info',
+            title: '🍪 Cookie Notice',
+            text: "We're using cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+            confirmButtonText: 'Got it!',
+            });
+        });
     </script>
 
 </body>

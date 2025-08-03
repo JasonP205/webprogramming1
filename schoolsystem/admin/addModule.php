@@ -11,6 +11,7 @@ try{
         $_POST['moduleName'],
         $_FILES['moduleImage']['tmp_name'],
         $_POST['description']);
+        $_SESSION['message'] = 'Module added successfully.';
         header('Location: module_management.php');
     } else{
         $title = "Add Module";

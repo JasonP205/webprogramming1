@@ -60,6 +60,15 @@
         });
         <?php unset($_SESSION['error']); ?>
     <?php endif; ?>
+
+    <?php if (isset($_SESSION['message'])): ?>
+        Swal.fire({
+            icon: 'success',
+            title: 'Success!',
+            text: "<?= addslashes($_SESSION['message']); ?>"
+        });
+        <?php unset($_SESSION['message']); ?>
+    <?php endif; ?>
 </script>
 
 

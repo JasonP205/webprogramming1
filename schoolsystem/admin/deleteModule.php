@@ -4,6 +4,7 @@ try{
     include '../includes/DatabaseConnection.php';
     include '../includes/DatabaseFunctions.php';
     deleteModule($pdo, $_POST['moduleId']);
+    $_SESSION['message'] = 'Module deleted successfully.';
     header('location: module_management.php'); 
 } catch (PDOException $e) {
     session_start();
@@ -13,4 +14,3 @@ try{
 
 }
 include '../templates/admin/admin_layout.html.php';
-?>

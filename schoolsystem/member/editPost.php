@@ -15,6 +15,7 @@ try {
         $_POST['postContent'],
         $_FILES['image']['tmp_name'],
         $_POST['moduleId']);
+        $_SESSION['message'] = 'Update post successfully.';
         header('location: ../member/member_home.php');
         exit;
     } else {

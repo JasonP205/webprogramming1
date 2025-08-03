@@ -7,6 +7,7 @@ $postId = $_GET['postId'];
 if (isset($postId)) {
     try {
         deleteComment($pdo, $commentId);
+        $_SESSION['message'] = 'Comment deleted successfully.';
         handleHeader($pdo, $_SESSION['userId'],'admin/detailPost.php?postId=' . $postId, 'member/detailPost.php?postId=' . $postId);
         exit();
     } catch (PDOException $e) {
